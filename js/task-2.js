@@ -13,15 +13,9 @@ class Storage {
         this.#items.push(newItem);
     }
 
-    removeItem (removeItem) {
-        const dizi = [];
-        array.forEach(element => {
-            if (element !== removeItem) {
-                dizi.push(element);
-            }
-        });
-        this.#items = dizi;
-    }
+    removeItem(itemToRemove) {
+    this.#items = this.#items.filter((item) => item !== itemToRemove);
+  }
 }
 
 const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
