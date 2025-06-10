@@ -2,7 +2,7 @@ class Storage {
     #items;
 
     constructor (InItems) {
-        this.items = InItems;
+        this.#items = InItems;
     }
 
     getItems () {
@@ -10,7 +10,7 @@ class Storage {
     }
 
     addItem (newItem) {
-        this.items.push(newItem);
+        this.#items.push(newItem);
     }
 
     removeItem (removeItem) {
@@ -20,7 +20,7 @@ class Storage {
                 dizi.push(element);
             }
         });
-        this.items = dizi;
+        this.#items = dizi;
     }
 }
 
